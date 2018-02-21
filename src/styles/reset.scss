@@ -3,6 +3,13 @@
    License: none (public domain)
 */
 
+@mixin minimal-reset() {
+  body{
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
 @mixin reset-html() {
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,3 +57,4 @@
 }
 
 // @include reset-html();
+@include minimal-reset();
