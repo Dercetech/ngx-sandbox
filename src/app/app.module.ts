@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {AppRoutingModule} from './routing.module';
 import {CommonServicesModule} from './commons/common-services.module';
 import {SandboxFrameworkServicesModule} from './framework/framework.services.module';
 
@@ -15,8 +14,8 @@ import {PagesModule} from './pages/pages.module';
   imports: [
     BrowserModule,
 
-    // Routing
-    AppRoutingModule,
+    // Import pages directly (no routing happens in this project)
+    PagesModule,
 
     // App-specific singletons registery
     CommonServicesModule.forRoot(),
