@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 import {LandingComponent} from './pages/landing/landing.component';
+import {SwitchMapComponent} from './pages/operators/switch-map/switch-map.component';
 
 const appRoutes: Routes = [
 
@@ -9,7 +10,9 @@ const appRoutes: Routes = [
   { path: '', component: LandingComponent,
     data: { },
     canActivate: []
-  }
+  },
+
+  { path: 'switchMap', component: SwitchMapComponent }
 /*
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'TBD'},

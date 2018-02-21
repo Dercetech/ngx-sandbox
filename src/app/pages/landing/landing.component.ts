@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'jem-landing',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  sections: any[] = [
+    {
+      title: 'Basic operators',
+      links: []
+    },
+
+    {
+      title: 'Advanced operators',
+      links: [
+        {title: 'switchMap', route : 'switchMap'}
+      ]
+    },
+  ];
+
+  constructor(private _router: Router) { }
+
+
 
   ngOnInit() {
   }
 
+  goto(routeName: string): void {
+    this._router.navigate([routeName]);
+  }
 }

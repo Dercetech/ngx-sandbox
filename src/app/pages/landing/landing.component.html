@@ -1,6 +1,13 @@
 <div jemPadding fxLayout="column">
   <mat-card>
-    <h2>Hi,</h2>
-    <p>This could be a nice place to start sandboxing stuff... see you in sb_ prefixed branches for topics.</p>
+    <h2>RxJS Sandbox</h2>
+    <p>This sandbox helps practicing the various operators of RxJS. The rating between easy and difficult is purely subjective. It's based on a suggested learning sequence as their processing and writing gets more abstract.</p>
+
+    <div *ngFor="let section of sections">
+      <h3>{{ section.title }}</h3>
+      <ul>
+        <li *ngFor="let entry of section.links" ><button mat-button [routerLink]="[entry.route]">{{ entry.title }}</button></li>
+      </ul>
+    </div>
   </mat-card>
 </div>
