@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'jem-landing',
+  selector: 'jem-landing-page',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })

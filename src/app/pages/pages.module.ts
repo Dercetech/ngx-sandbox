@@ -15,6 +15,8 @@ import {CustomMaterialModule} from '../framework/material/material.module';
     LayoutModule,
     CustomMaterialModule
   ],
-  exports: [],
+  exports: [
+    LandingComponent
+  ],
 })
 export class PagesModule {}
