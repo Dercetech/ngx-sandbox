@@ -1,6 +1,52 @@
-<div jemPadding fxLayout="column">
-  <mat-card>
-    <h2>Hi,</h2>
-    <p>This could be a nice place to start sandboxing stuff... see you in sb_ prefixed branches for topics.</p>
-  </mat-card>
-</div>
+<mat-tab-group>
+  <mat-tab label="sandbox">
+    <div jemPadding fxLayout="column">
+      <mat-card>
+        <h2>Email sync & async validation</h2>
+        <form [formGroup]="emailForm">
+         <div fxLayout="row">
+            <div fxLayout="column" fxFlex="0 1 400px" fxLayoutGap="16px">
+              <mat-form-field>
+                <input matInput placeholder="display name" formControlName="name">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="email" formControlName="email">
+              </mat-form-field>
+              <div>hint: use "unavailable@gmail.com" for an async error</div>
+              <div style="color: red" *ngIf="emailForm.get('email').errors && emailForm.get('email').errors['asyncInvalid']">
+                email not available
+              </div>
+              <div style="color: red" *ngIf="emailForm.value['email']?.length > 0 && emailForm.get('email').errors && emailForm.get('email').errors['email'] ">
+                this email doesn't seem valid
+              </div>
+              <button mat-button mat-raised-button>Submit</button>
+            </div>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="highlights">
+    <mat-card>
+      <h2>A few pointers</h2>
+      <ul>
+        <li>Check out the implementation of custom-validators.</li>
+        <li>It has both the implementation of a Validator interface and the providing of factory functions.</li>
+        <li>This way, you may test both approaches. One should suit your need.</li>
+      </ul>
+    </mat-card>
+  </mat-tab>
+
+  <mat-tab label="resources">
+    <mat-card>
+      <h2>Recommended resources</h2>
+      <mat-list role="list">
+        <mat-list-item role="listitem"><a href="http://fiyazhasan.me/asynchronous-validation-in-angulars-reactive-forms-control/" target="_blank">My preferred async validator creation technique</a></mat-list-item>
+        <mat-list-item role="listitem"><a href="https://netbasal.com/angular-2-forms-create-async-validator-directive-dd3fd026cb45" target="_blank">another way of creating an async validator, requires some tweaking</a></mat-list-item>
+        <mat-list-item role="listitem"><a href="https://alligator.io/angular/async-validators/" target="_blank">Nice in the sense it show how to outsource the validator provider, but lack typing</a></mat-list-item>
+      </mat-list>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>
+
