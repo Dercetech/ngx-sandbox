@@ -1,5 +1,8 @@
 jem-root {
 
+  font-family: sans-serif;
+  font-size: 15px;
+
   height: 100vh;  // make sure to have a reset.scss included like I do in this project under styles (see /.angular-cli.json styles array)
   width: 100vw;
 
