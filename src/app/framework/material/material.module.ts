@@ -9,7 +9,7 @@ import {
   MatSelectModule,
   MatSidenavModule, MatSlideToggleModule,
   MatStepperModule,
-  MatTableModule,
+  MatTableModule, MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -34,6 +34,7 @@ import {
     MatSlideToggleModule,
     MatStepperModule,
     MatTableModule,
+    MatTabsModule,
     MatToolbarModule
   ],
   exports: [
@@ -56,6 +57,7 @@ import {
     MatSlideToggleModule,
     MatStepperModule,
     MatTableModule,
+    MatTabsModule,
     MatToolbarModule
   ]
 })

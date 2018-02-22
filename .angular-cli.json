@@ -20,7 +20,8 @@
       "prefix": "jem",
       "styles": [
         "styles/reset.scss",
-        "styles/styles.scss"
+        "styles/styles.scss",
+        "styles/material.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
